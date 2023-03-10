@@ -74,11 +74,10 @@
 #c=$(docker ps -q) && [[ $c ]] && docker kill $c
 
 
-docker rm store 
-docker build . -t necios
-docker run -p 4000:4000 --name store -v $(pwd)/docs:/doc necios bash -c 'jekyll build . && cp * /doc -r && chown 1000:1000 /doc -R'
+docker build . -t contabilidad_2022
+docker run -rm -p 4000:4000 --name store_contabilidad_2022 -v $(pwd)/docs_2022:/doc contabilidad_2022 bash -c 'jekyll build . && cp * /doc -r && chown 1000:1000 /doc -R'
 
-docker run -p 4000:4000 --volumes-from store -v $(pwd)/docs:/doc necios bash -c 'cd /doc && jekyll serve'
+#docker run -p 4000:4000 --volumes-from store_contabilidad_2022 -v $(pwd)/docs:/doc contabilidad_2022 bash -c 'cd /doc && jekyll serve'
 
 
 

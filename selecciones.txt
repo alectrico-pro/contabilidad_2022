@@ -7,7 +7,7 @@
 
 ( selecciones
  (regimen propyme)
- (empresa-seleccionada alectrico-2021)
+ (empresa-seleccionada alectrico-2022)
  (imprimir-detalles true)
  (liquidar subcuentas) 
  (origen-de-subcuentas real)
